@@ -49,15 +49,37 @@ export default function IceCube() {
           viewBox="0 0 100 100"
           className="w-full h-full fill-blue-300 stroke-blue-400"
         >
+          {/* Cube main shape */}
           <path
-            d="M20,20 L80,20 L90,50 L80,80 L20,80 L10,50 Z"
+            d="M20,30 L80,30 L80,90 L20,90 Z"
             strokeWidth="2"
           />
+          {/* Cube top face */}
           <path
-            d="M30,30 L70,30 M25,50 L75,50 M30,70 L70,70"
+            d="M20,30 L35,15 L95,15 L80,30 Z"
+            strokeWidth="2"
+            className="fill-blue-200"
+          />
+          {/* Cube right face */}
+          <path
+            d="M80,30 L95,15 L95,75 L80,90 Z"
+            strokeWidth="2"
+            className="fill-blue-400"
+          />
+          {/* Ice crystal details */}
+          <path
+            d="M35,45 L65,45 M30,60 L70,60 M35,75 L65,75"
             stroke="white"
             strokeWidth="2"
-            opacity="0.5"
+            opacity="0.6"
+          />
+          {/* Shine effect */}
+          <circle
+            cx="35"
+            cy="40"
+            r="5"
+            fill="white"
+            opacity="0.3"
           />
         </svg>
       </div>
