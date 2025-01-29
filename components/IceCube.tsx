@@ -12,13 +12,25 @@ export default function IceCube() {
     }
   };
 
+  const handleReplay = () => {
+    setClicks(0);
+  };
+
   const opacity = 1 - (clicks / maxClicks);
   const scale = 1 - (clicks / maxClicks) * 0.5;
 
   if (clicks >= maxClicks) {
     return (
-      <div className="text-2xl text-blue-900 font-bold">
-        The ice cube has melted!
+      <div className="flex flex-col items-center gap-4">
+        <div className="text-2xl text-blue-900 font-bold">
+          The ice cube has melted!
+        </div>
+        <button 
+          onClick={handleReplay}
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200"
+        >
+          Play Again
+        </button>
       </div>
     );
   }
