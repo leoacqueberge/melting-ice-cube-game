@@ -21,13 +21,13 @@ export default function IceCube() {
 
   if (clicks >= maxClicks) {
     return (
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 select-none">
         <div className="text-2xl text-blue-900 font-bold">
           The ice cube has melted!
         </div>
         <button 
           onClick={handleReplay}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 select-none"
         >
           Play Again
         </button>
@@ -36,7 +36,7 @@ export default function IceCube() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 select-none">
       <div 
         className="w-32 h-32 cursor-pointer transition-all duration-200 ease-in-out"
         style={{
